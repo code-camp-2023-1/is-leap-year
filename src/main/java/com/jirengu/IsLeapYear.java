@@ -9,6 +9,12 @@ public class IsLeapYear {
         // 1. 任何能被4整除的年份通常是一个闰年
         // 2. 特殊情况：能被100整除而不能被400整除的年份不是闰年
         // 提示：利用条件和逻辑运算符实现这个稍微复杂的逻辑判断
-        return false;
+        if (year % 4 != 0) {
+            return false;
+        }
+        if (year % 100 == 0 && year % 400 != 0) {
+            return false;
+        }
+        return true;
     }
 }
